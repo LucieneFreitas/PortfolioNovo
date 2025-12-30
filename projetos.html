@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projetos | Luciene</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">∞</span>
+        <span class="brand-name">Luciene</span>
+      </a>
+
+      <ul class="nav-list">
+        <li><a class="nav-link" href="sobre.html">Sobre mim</a></li>
+        <li><a class="nav-link" href="habilidades.html">Habilidades</a></li>
+        <li><a class="nav-link active" href="projetos.html">Projetos</a></li>
+        <li><a class="nav-link" href="contato.html">Contato</a></li>
+      </ul>
+
+      <a class="btn btn-primary" href="contato.html">Entrar em contato</a>
+    </nav>
+  </header>
+
+  <main class="main" role="main">
+    <section class="section">
+      <div class="container">
+        <header class="section-head section-head-row">
+          <div>
+            <h1 class="section-title">Projetos</h1>
+            <p class="section-desc">Cases que mostram execução e impacto.</p>
+          </div>
+          <a class="btn btn-ghost" href="contato.html">Quero um projeto desses</a>
+        </header>
+
+        <div class="grid grid-3">
+          <article class="project">
+            <h2 class="project-title">Portal / Landing Page</h2>
+            <p class="project-text">Design responsivo e componentes reutilizáveis.</p>
+            <ul class="tags" aria-label="Tecnologias">
+              <li class="tag">HTML</li>
+              <li class="tag">CSS</li>
+              <li class="tag">UI</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <h2 class="project-title">Automação no ServiceNow</h2>
+            <p class="project-text">Fluxos e regras reduzindo tempo operacional.</p>
+            <ul class="tags" aria-label="Tecnologias">
+              <li class="tag">Flow</li>
+              <li class="tag">BR</li>
+              <li class="tag">Script Include</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <h2 class="project-title">Catálogo com validações</h2>
+            <p class="project-text">Record Producer + validações client/server.</p>
+            <ul class="tags" aria-label="Tecnologias">
+              <li class="tag">Catalog</li>
+              <li class="tag">Client Script</li>
+              <li class="tag">UI Policy</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script>
+    fetch("footer.html")
+      .then(r => r.text())
+      .then(html => (document.getElementById("footer").innerHTML = html));
+  </script>
+</body>
+</html>

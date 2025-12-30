@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sobre | Luciene</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">∞</span>
+        <span class="brand-name">Luciene</span>
+      </a>
+
+      <ul class="nav-list">
+        <li><a class="nav-link active" href="sobre.html">Sobre mim</a></li>
+        <li><a class="nav-link" href="habilidades.html">Habilidades</a></li>
+        <li><a class="nav-link" href="projetos.html">Projetos</a></li>
+        <li><a class="nav-link" href="contato.html">Contato</a></li>
+      </ul>
+
+      <a class="btn btn-primary" href="contato.html">Entrar em contato</a>
+    </nav>
+  </header>
+
+  <main class="main" role="main">
+    <section class="section">
+      <div class="container">
+        <header class="section-head">
+          <h1 class="section-title">Sobre mim</h1>
+          <p class="section-desc">
+            Dev Full-Stack e ServiceNow com foco em automação, portais e processos.
+          </p>
+        </header>
+
+        <div class="card">
+          <p>
+            Eu atuo com desenvolvimento e sustentação em ambientes críticos,
+            criando soluções que reduzem esforço operacional e elevam a experiência do usuário.
+          </p>
+          <p>
+            Curto código limpo, documentação e entregas com resultado mensurável (menos retrabalho, mais eficiência).
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script>
+    fetch("footer.html")
+      .then(r => r.text())
+      .then(html => (document.getElementById("footer").innerHTML = html));
+  </script>
+</body>
+</html>

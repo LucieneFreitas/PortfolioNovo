@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Habilidades | Luciene</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">∞</span>
+        <span class="brand-name">Luciene</span>
+      </a>
+
+      <ul class="nav-list">
+        <li><a class="nav-link" href="sobre.html">Sobre mim</a></li>
+        <li><a class="nav-link active" href="habilidades.html">Habilidades</a></li>
+        <li><a class="nav-link" href="projetos.html">Projetos</a></li>
+        <li><a class="nav-link" href="contato.html">Contato</a></li>
+      </ul>
+
+      <a class="btn btn-primary" href="contato.html">Entrar em contato</a>
+    </nav>
+  </header>
+
+  <main class="main" role="main">
+    <section class="section section-alt">
+      <div class="container">
+        <header class="section-head">
+          <h1 class="section-title">Habilidades</h1>
+          <p class="section-desc">Stack focada em entrega e governança.</p>
+        </header>
+
+        <ul class="grid grid-3" role="list">
+          <li class="tile">
+            <h3 class="tile-title">ServiceNow</h3>
+            <p class="tile-text">ITSM, SPM, App Engine, Flow Designer, Service Portal.</p>
+          </li>
+          <li class="tile">
+            <h3 class="tile-title">Front-end</h3>
+            <p class="tile-text">React, Angular, TypeScript, UI/UX.</p>
+          </li>
+          <li class="tile">
+            <h3 class="tile-title">Back-end</h3>
+            <p class="tile-text">Node.js, APIs, integrações, padrões.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script>
+    fetch("footer.html")
+      .then(r => r.text())
+      .then(html => (document.getElementById("footer").innerHTML = html));
+  </script>
+</body>
+</html>

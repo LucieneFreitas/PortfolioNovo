@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Luciene | Full-Stack & ServiceNow</title>
+  <meta name="description" content="Portfólio da Luciene: Full-Stack & ServiceNow." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">∞</span>
+        <span class="brand-name">Luciene</span>
+      </a>
+
+      <ul class="nav-list">
+        <li><a class="nav-link" href="sobre.html">Sobre mim</a></li>
+        <li><a class="nav-link" href="habilidades.html">Habilidades</a></li>
+        <li><a class="nav-link" href="projetos.html">Projetos</a></li>
+        <li><a class="nav-link" href="contato.html">Contato</a></li>
+      </ul>
+
+      <a class="btn btn-primary" href="contato.html">Entrar em contato</a>
+    </nav>
+  </header>
+
+  <main id="conteudo" class="main" role="main">
+    <section class="hero" aria-label="Apresentação">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 class="hero-title">
+            Olá! Sou <span class="accent">Luciene</span>
+          </h1>
+
+          <p class="hero-subtitle">Desenvolvedora Full-Stack & ServiceNow</p>
+
+          <p class="hero-text">
+            Transformo processos complexos em soluções digitais simples,
+            eficientes e escaláveis.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="projetos.html">Ver projetos</a>
+            <a class="btn btn-ghost" href="contato.html">Entrar em contato</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Foto da Luciene em destaque">
+          <div class="photo-ring">
+            <img class="photo" src="./assets/luciene.jpg" alt="Foto da Luciene sorrindo" />
+          </div>
+
+          <span class="spark spark-1" aria-hidden="true"></span>
+          <span class="spark spark-2" aria-hidden="true"></span>
+          <span class="spark spark-3" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-label="Acesso rápido">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-title">Atalhos</h2>
+          <p class="section-desc">Vai direto no que importa 👇</p>
+        </header>
+
+        <div class="grid grid-3">
+          <a class="tile tile-link" href="sobre.html">
+            <h3 class="tile-title">Sobre mim</h3>
+            <p class="tile-text">Resumo profissional + foco em impacto.</p>
+          </a>
+
+          <a class="tile tile-link" href="habilidades.html">
+            <h3 class="tile-title">Habilidades</h3>
+            <p class="tile-text">Stack e competências que entregam valor.</p>
+          </a>
+
+          <a class="tile tile-link" href="projetos.html">
+            <h3 class="tile-title">Projetos</h3>
+            <p class="tile-text">Cases e resultados do mundo real.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script>
+    fetch("footer.html")
+      .then(r => r.text())
+      .then(html => (document.getElementById("footer").innerHTML = html))
+      .catch(() => console.log("Não carregou footer.html"));
+  </script>
+</body>
+</html>

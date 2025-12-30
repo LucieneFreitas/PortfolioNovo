@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato | Luciene</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">∞</span>
+        <span class="brand-name">Luciene</span>
+      </a>
+
+      <ul class="nav-list">
+        <li><a class="nav-link" href="sobre.html">Sobre mim</a></li>
+        <li><a class="nav-link" href="habilidades.html">Habilidades</a></li>
+        <li><a class="nav-link" href="projetos.html">Projetos</a></li>
+        <li><a class="nav-link active" href="contato.html">Contato</a></li>
+      </ul>
+
+      <a class="btn btn-primary" href="contato.html">Entrar em contato</a>
+    </nav>
+  </header>
+
+  <main class="main" role="main">
+    <section class="section section-alt">
+      <div class="container">
+        <header class="section-head">
+          <h1 class="section-title">Contato</h1>
+          <p class="section-desc">Me chama e a gente organiza o próximo sprint 😄</p>
+        </header>
+
+        <div class="contact">
+          <form class="form" action="#" method="post" aria-label="Formulário de contato">
+            <div class="field">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Seu nome" required />
+            </div>
+
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="seuemail@exemplo.com" required />
+            </div>
+
+            <div class="field">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte rapidinho o que você precisa" required></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Enviar</button>
+          </form>
+
+          <aside class="contact-info" aria-label="Outras formas de contato">
+            <div class="card">
+              <h2 class="tile-title">Onde me achar</h2>
+              <p class="tile-text">
+                <strong>E-mail:</strong> seuemail@exemplo.com<br />
+                <strong>LinkedIn:</strong> linkedin.com/in/seu-perfil<br />
+                <strong>GitHub:</strong> github.com/seuuser
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script>
+    fetch("footer.html")
+      .then(r => r.text())
+      .then(html => (document.getElementById("footer").innerHTML = html));
+  </script>
+</body>
+</html>
