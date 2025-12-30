@@ -1,0 +1,35 @@
+/* =====================================================
+   PROJETOS
+===================================================== */
+.project {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.project__title {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.project__text {
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(0, 229, 168, 0.10);
+}

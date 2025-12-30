@@ -1,0 +1,13 @@
+/* =====================================================
+   FOOTER
+===================================================== */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 26px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: center;
+  color: rgba(15, 23, 42, 0.75);
+}

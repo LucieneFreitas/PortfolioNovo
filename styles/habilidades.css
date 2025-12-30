@@ -1,0 +1,19 @@
+/* =====================================================
+   HABILIDADES
+===================================================== */
+.tile {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.tile__title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.tile__text {
+  color: var(--muted);
+}
