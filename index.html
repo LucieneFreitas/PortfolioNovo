@@ -15,85 +15,206 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  
 
-  <header class="site-header" role="banner">
-    <nav class="nav" aria-label="Navegação principal">
-      <a class="brand" href="index.html" aria-label="Home">
-        <span class="brand-mark" aria-hidden="true">∞</span>
-        <span class="brand-name">Luciene</span>
-      </a>
+  <header class="top">
+  <!-- =====================
+           LOGO 
+      ====================== -->
+      <div class="prt_logo_wrapper">
+        <!-- Mantive <a> para comportamento futuro (voltar ao topo) -->
+        <a href="#home" aria-label="Home">
+          <img src="assets/logo_lf.png" alt="Logo do Portfólio" id="prt_close_tab">
+        </a>
+      </div>
 
-      <ul class="nav-list">
-        <li><a class="nav-link" href="sobre.html">Sobre mim</a></li>
-        <li><a class="nav-link" href="habilidades.html">Habilidades</a></li>
-        <li><a class="nav-link" href="projetos.html">Projetos</a></li>
-        <li><a class="nav-link" href="contato.html">Contato</a></li>
-      </ul>
+  <!-- Botão hamburger (mobile) -->
+  <button class="menu-toggle" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
-      <a class="btn btn-primary" href="contato.html">Entrar em contato</a>
-    </nav>
+  <nav>
+    <ul class="nav-list">
+      <li><a class="nav-link" href="sobre.html">Sobre mim</a></li>
+      <li><a class="nav-link" href="habilidades.html">Habilidades</a></li>
+      <li><a class="nav-link" href="projetos.html">Projetos</a></li>
+      <li><a class="nav-link" href="contato.html">Contato</a></li>
+    </ul>
+
+    <a class="btn btn-primary" href="contato.html">Entrar em Contato</a>
+  </nav>
+</header>
+
+  
+<!-- =====================
+           HERO
+      ====================== -->
+<section class="hero" aria-label="Apresentação">
+  <!-- Coluna da esquerda - Texto -->
+  <div>
+    <h1>
+      Olá! Sou Luciene
+    </h1>
+
+    <h3>
+      Desenvolvedora
+      <div>
+        <span>ServiceNow</span>
+        <span>Full-Stack</span>
+        <span>ServiceNow</span>
+        
+      </div>
+    </h3>
+
+    <!-- Botões de ação -->
+    <div class="buttons">
+  <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+  <a href="#contato" class="btn btn-secondary">Entrar em Contato</a>
+</div>
+  </div>
+
+  <!-- Coluna da direita - Imagem -->
+  <div class="hero-avatar">
+  <img
+    src="assets/lu_verde.png"
+    alt="Luciene – Desenvolvedora Full-Stack e ServiceNow"
+    loading="lazy"
+  />
+</div>
+
+</section>
+
+<!--FAIXA ROTATIVA BANNER-->
+<<section class="ticker" aria-label="Tecnologias e foco profissional">
+  <div class="ticker__track" aria-hidden="true">
+    <div class="ticker__content">
+      <span class="ticker__item">ServiceNow <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">Full-Stack <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">Automação <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">ITSM <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">Service Portal <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">React <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">Node.js <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">Angular <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">Banco de Dados <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">IA <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">Catalog Items <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">Flow Designer <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">GlideRecord <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">Access Controls (ACL) <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">Virtual Agent <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">REST APIs <span class="ticker__icon">&lt;/&gt;</span></span>
+    </div>
+
+    <!-- DUPLICADO (igual ao de cima) para loop infinito sem pulo -->
+    <div class="ticker__content" aria-hidden="true">
+      <span class="ticker__item">ServiceNow <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">Full-Stack <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">Automação <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">ITSM <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">Service Portal <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">React <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">Node.js <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">Angular <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">Banco de Dados <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">IA <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">Catalog Items <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">Flow Designer <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">GlideRecord <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">Access Controls (ACL) <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">Virtual Agent <span class="ticker__icon">&lt;/&gt;</span></span>
+      <span class="ticker__item">REST APIs <span class="ticker__icon">&lt;/&gt;</span></span>
+    </div>
+  </div>
+</section>
+
+  
+<!-- =========================
+     GALERIA DE FOTOS
+========================= -->
+<section class="gallery">
+
+  <!-- Cabeçalho da galeria -->
+  <header>
+    <h2>GALERIA DE FOTOS</h2>
   </header>
 
-  <main id="conteudo" class="main" role="main">
-    <section class="hero" aria-label="Apresentação">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <h1 class="hero-title">
-            Olá! Sou <span class="accent">Luciene</span>
-          </h1>
+  <!-- Conteúdo da galeria -->
+  <div class="content">
 
-          <p class="hero-subtitle">Desenvolvedora Full-Stack & ServiceNow</p>
+    <!-- Item da galeria -->
+    <figure>
+      <img src="assets/images/01.png" alt="" />
+      <figcaption>
+        <img src="assets/images/person.png" alt="" />
+        <span>@laviniapereira</span>
+      </figcaption>
+    </figure>
 
-          <p class="hero-text">
-            Transformo processos complexos em soluções digitais simples,
-            eficientes e escaláveis.
-          </p>
+    <figure data-delay>
+      <img src="assets/images/02.png" alt="" />
+      <figcaption>
+        <img src="assets/images/person.png" alt="" />
+        <span>@laviniapereira</span>
+      </figcaption>
+    </figure>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="projetos.html">Ver projetos</a>
-            <a class="btn btn-ghost" href="contato.html">Entrar em contato</a>
-          </div>
-        </div>
+    <figure>
+      <img src="assets/images/03.png" alt="" />
+      <figcaption>
+        <img src="assets/images/person.png" alt="" />
+        <span>@laviniapereira</span>
+      </figcaption>
+    </figure>
 
-        <div class="hero-visual" aria-label="Foto da Luciene em destaque">
-          <div class="photo-ring">
-            <img class="photo" src="./assets/luciene.jpg" alt="Foto da Luciene sorrindo" />
-          </div>
+    <figure data-delay>
+      <img src="assets/images/04.png" alt="" />
+      <figcaption>
+        <img src="assets/images/person.png" alt="" />
+        <span>@laviniapereira</span>
+      </figcaption>
+    </figure>
 
-          <span class="spark spark-1" aria-hidden="true"></span>
-          <span class="spark spark-2" aria-hidden="true"></span>
-          <span class="spark spark-3" aria-hidden="true"></span>
-        </div>
-      </div>
-    </section>
+  </div>
+    
 
-    <section class="section section-alt" aria-label="Acesso rápido">
-      <div class="container">
-        <header class="section-head">
-          <h2 class="section-title">Atalhos</h2>
-          <p class="section-desc">Vai direto no que importa 👇</p>
-        </header>
+  <!-- =========================
+     FOOTER / RODAPÉ
+========================= -->
+<footer>
 
-        <div class="grid grid-3">
-          <a class="tile tile-link" href="sobre.html">
-            <h3 class="tile-title">Sobre mim</h3>
-            <p class="tile-text">Resumo profissional + foco em impacto.</p>
-          </a>
+  <!-- Logo no rodapé -->
+  <div class="logo">
+    <img src="assets/logo.svg" alt="" />
+    Snitap
+  </div>
 
-          <a class="tile tile-link" href="habilidades.html">
-            <h3 class="tile-title">Habilidades</h3>
-            <p class="tile-text">Stack e competências que entregam valor.</p>
-          </a>
+  <!-- Navegação institucional -->
+  <nav>
+    <a href="#">Sobre</a>
+    <a href="#">Nossas lojas</a>
+    <a href="#">Política de privacidade</a>
+  </nav>
 
-          <a class="tile tile-link" href="projetos.html">
-            <h3 class="tile-title">Projetos</h3>
-            <p class="tile-text">Cases e resultados do mundo real.</p>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
+  <!-- Redes sociais -->
+  <div class="social-links">
+    <a href="#" title="instagram">
+      <img src="assets/icons/instagram.svg" alt="" />
+    </a>
+    <a href="#" title="facebook">
+      <img src="assets/icons/facebook.svg" alt="" />
+    </a>
+    <a href="#" title="youtube">
+      <img src="assets/icons/youtube.svg" alt="" />
+    </a>
+    <a href="#" title="tiktok">
+      <img src="assets/icons/tiktok.svg" alt="" />
+    </a>
+  </div>
+
+</footer>
 
   <div id="footer"></div>
   <script>
@@ -102,5 +223,32 @@
       .then(html => (document.getElementById("footer").innerHTML = html))
       .catch(() => console.log("Não carregou footer.html"));
   </script>
+
+  <script>
+  // Toggle do menu mobile
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.top nav');
+  
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    nav.classList.toggle('active');
+  });
+  
+  // Fechar menu ao clicar em um link
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      menuToggle.classList.remove('active');
+      nav.classList.remove('active');
+    });
+  });
+  
+  // Fechar menu ao clicar no overlay
+  nav.addEventListener('click', (e) => {
+    if (e.target === nav) {
+      menuToggle.classList.remove('active');
+      nav.classList.remove('active');
+    }
+  });
+</script>
 </body>
 </html>

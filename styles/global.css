@@ -1,222 +1,224 @@
 /* =====================================================
-   RESET GLOBAL
-   Normaliza espaçamentos e box model
+   VARIÁVEIS CSS
 ===================================================== */
-*,
-*::after,
-*::before {
+:root {
+  /* Cores Principais */
+  --color-primary: #1DD6A3;
+  --color-primary-dark: #17B58B;
+  --color-primary-light: #A3F3DA;
+  
+  /* Cores de Texto */
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #4A4A4A;
+  --color-text-light: #7A7A7A;
+  --color-white: #FFFFFF;
+  --color-magenta: #E91E63;
+  --color-blue: #5DD9E8;
+  
+  /* Cores de Fundo */
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F8F9FA;
+  --color-bg-dark: #1A1A1A;
+  
+  /* Fontes */
+  --ff-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ff-secondary: 'Montserrat', sans-serif;
+  --ff-display: 'Syne', sans-serif;
+  
+  /* Tamanhos de Texto */
+  --text-xs: 0.875rem;    /* 14px */
+  --text-sm: 1rem;        /* 16px */
+  --text-md: 1.125rem;    /* 18px */
+  --text-lg: 1.5rem;      /* 24px */
+  --text-xl: 3rem;        /* 48px */
+  --text-2xl: 4rem;       /* 64px */
+  
+  /* Espaçamentos */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  
+  /* Container */
+  --container-max: 1400px;
+  --container-padding: 2rem;
+  
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-full: 9999px;
+  
+  /* Sombras */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+  
+  /* Transições */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+}
+
+/* =====================================================
+   RESET BASE
+===================================================== */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
-
-img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
-ul { list-style: none; }
-button, input, textarea { font: inherit; }
-
-/* =====================================================
-   DESIGN TOKENS (ROOT)
-   Cores, fontes e escalas tipográficas
-===================================================== */
-:root {
-  /* Paleta principal (mantive as suas) */
-  --snitap-sun: #ffcd1e;
-  --snitap-sky-mid: #06b6d4;
-  --snitap-sky-light: #67e8f9;
-  --snitap-joy-mid: #db2777;
-  --snitap-joy-light: #f472b6;
-  --snitap-leaf-mid: #16a34a;
-
-  /* Portfólio (accent principal do layout verde tech) */
-  --accent: #00e5a8;
-  --accent-soft: #7cf3d0;
-
-  /* Base */
-  --text: #0f172a;
-  --muted: #556070;
-  --background: #ffffff;
-  --background-soft: #f6f8fb;
-
-  --border: rgba(15, 23, 42, 0.10);
-  --shadow: 0 12px 30px rgba(15, 23, 42, 0.10);
-
-  --radius: 18px;
-  --container: 1120px;
-
-  /* Fonte base */
-  --ff-base: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-
-  /* Escala tipográfica */
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-lg: 2.5rem;
-  --text-xl: 4rem;
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
 }
 
-/* =====================================================
-   BASE (BODY / A11Y / CONTAINER)
-===================================================== */
 body {
-  font-family: var(--ff-base);
-  color: var(--text);
-  background: var(--background);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
   line-height: 1.6;
 }
 
-.container {
-  width: min(100% - 40px, var(--container));
-  margin-inline: auto;
+/* =====================================================
+   TIPOGRAFIA BASE
+===================================================== */
+body {
+  font-family: var(--ff-base);
+  font-weight: 500;
 }
 
-.skip-link {
-  position: absolute;
-  left: -9999px;
-  top: 12px;
-  padding: 10px 12px;
-  background: var(--text);
-  color: #fff;
-  border-radius: 10px;
-  z-index: 999;
+h1,
+h2,
+h3 {
+  font-family: var(--ff-display);
+  font-weight: 700;
+  line-height: 1.2;
 }
-.skip-link:focus { left: 12px; }
 
-:focus-visible {
-  outline: 3px solid rgba(0, 229, 168, 0.35);
-  outline-offset: 3px;
-  border-radius: 10px;
+h1 {
+  font-size: var(--text-2xl);
+}
+
+h2 {
+  font-size: var(--text-xl);
+}
+
+h3 {
+  font-size: var(--text-lg);
+  font-family: var(--ff-secondary);
 }
 
 /* =====================================================
-   COMPONENTES REUTILIZÁVEIS
-   Botões, grids, cards, títulos
+   LINKS
+===================================================== */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+/* =====================================================
+   LISTAS
+===================================================== */
+ul,
+ol {
+  list-style: none;
+}
+
+/* =====================================================
+   IMAGENS
+===================================================== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =====================================================
+   BOTÕES
 ===================================================== */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 18px;
-  border-radius: 14px;
-  border: 1px solid transparent;
-  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: var(--text-sm);
   cursor: pointer;
-  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+  border: 2px solid transparent;
+  transition: all var(--transition-base);
   white-space: nowrap;
+  text-decoration: none;
 }
-.btn:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
-.btn:active { transform: translateY(0); box-shadow: none; }
 
 .btn-primary {
-  color: #fff;
-  background: linear-gradient(135deg, var(--accent), #18c48f);
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
 }
 
-.btn-ghost {
-  background: #fff;
-  border-color: var(--border);
-  color: var(--text);
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
-.card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 22px;
+.btn-secondary {
+  background: transparent;
+  color: var(--color-text-primary);
+  border-color: var(--color-text-primary);
 }
 
-.section {
-  padding: 72px 0;
-}
-
-.section--alt {
-  background: var(--background-soft);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.section__head { margin-bottom: 26px; }
-.section__title {
-  font-size: 1.8rem;
-  letter-spacing: -0.4px;
-  margin-bottom: 10px;
-}
-.section__desc {
-  color: var(--muted);
-}
-
-.grid { display: grid; gap: 18px; }
-.grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-
-/* =====================================================
-   HEADER / NAV (global)
-===================================================== */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 18px 0;
-}
-
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 800;
-}
-
-.brand-mark {
-  width: 42px;
-  height: 42px;
-  display: grid;
-  place-items: center;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  background: #fff;
-}
-
-.nav-list {
-  display: flex;
-  gap: 26px;
-}
-
-.nav-link {
-  font-weight: 600;
-  color: rgba(15, 23, 42, 0.75);
-}
-.nav-link:hover { color: var(--text); }
-
-.nav-link.active {
-  color: var(--text);
-  position: relative;
-}
-.nav-link.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 100%;
-  height: 3px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--accent), #18c48f);
+.btn-secondary:hover {
+  background: var(--color-text-primary);
+  color: var(--color-white);
 }
 
 /* =====================================================
-   RESPONSIVE (global)
+   SEÇÕES
 ===================================================== */
-@media (max-width: 980px) {
-  .nav-list { display: none; }
-  .grid--3 { grid-template-columns: 1fr; }
+section {
+  padding: var(--space-3xl) 0;
+}
+
+/* =====================================================
+   RESPONSIVIDADE - TAMANHOS DE TEXTO
+===================================================== */
+@media (max-width: 1024px) {
+  :root {
+    --text-2xl: 3.5rem;
+    --text-xl: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --text-2xl: 2.5rem;
+    --text-xl: 2rem;
+    --text-lg: 1.25rem;
+    --container-padding: 1.5rem;
+    --space-3xl: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --text-2xl: 2rem;
+    --text-xl: 1.75rem;
+    --text-lg: 1.125rem;
+    --container-padding: 1rem;
+    --space-3xl: 3rem;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+  }
 }
