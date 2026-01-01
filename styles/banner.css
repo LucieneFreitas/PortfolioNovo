@@ -1,36 +1,88 @@
-.banner{
-    max-width: 100%;
-    
-    padding-block: 2.5rem;
-    overflow: hidden;
+/* =====================================================
+   TICKER (faixa rotativa)
+===================================================== */
+.ticker{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 0.85rem 0;
+  border-radius: 14px;
 
-    .scroller{
-        
-        width: 100%;
-        overflow: hidden;
-        padding-block: 1rem;
-    }
-
-    .rolling{
-        display: flex;
-        gap: 1.5rem;
-        animation: rolling 2s linear infinite;
-    }
-
-
-.bg-gradient-animate {
-    background: linear-gradient(
-        45deg,
-        var(--color-blue),
-        var(--color-primary),
-        var(--color-magenta),
-    );
-}
+  /* fundo com vibe azul->verde->magenta */
+  background: linear-gradient(90deg,
+    color-mix(in oklab, var(--color-blue) 60%, white),
+    color-mix(in oklab, var(--color-primary-dark) 55%, white),
+    color-mix(in oklab, var(--color-magenta) 55%, white)
+  );
 }
 
+/* fade nas bordas (premium) */
+.ticker::before,
+.ticker::after{
+  content:"";
+  position:absolute;
+  top:0; bottom:0;
+  width: 90px;
+  z-index: 2;
+  pointer-events: none;
+}
 
-@keyframes rolling{
-    to{
-        transform: translateX(-132px);
-    }
+.ticker::before{
+  left:0;
+  background: linear-gradient(90deg, rgba(255,255,255,0.95), rgba(255,255,255,0));
+}
+
+.ticker::after{
+  right:0;
+  background: linear-gradient(270deg, rgba(255,255,255,0.95), rgba(255,255,255,0));
+}
+
+/* track que se move */
+.ticker__track{
+  display:flex;
+  width: max-content;
+  animation: ticker-scroll 24s linear infinite;
+  will-change: transform;
+}
+
+/* cada bloco de conteúdo */
+.ticker__content{
+  display:flex;
+  align-items:center;
+  gap: 2.2rem;
+  padding-inline: 1.75rem;
+}
+
+/* item */
+.ticker__item{
+  display:inline-flex;
+  align-items:center;
+  gap: 0.6rem;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: rgba(0,0,0,0.78);
+}
+
+/* ícone (coloridinho) */
+.ticker__icon{
+  font-weight: 900;
+  opacity: 0.9;
+  color: var(--color-magenta);
+}
+
+/* alterna a cor do ícone pra ficar mais “vivo” */
+.ticker__item:nth-child(3n) .ticker__icon{ color: var(--color-primary-dark); }
+.ticker__item:nth-child(3n+2) .ticker__icon{ color: var(--color-blue); }
+
+/* animação sem pulo:
+   como tem 2 conteúdos iguais, andar -50% fecha o loop perfeito */
+@keyframes ticker-scroll{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); }
+}
+
+/* acessibilidade (respeita reduzir movimento) */
+@media (prefers-reduced-motion: reduce){
+  .ticker__track{ animation: none; }
 }

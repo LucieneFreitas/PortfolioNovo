@@ -36,14 +36,14 @@
   </button>
 
   <nav>
-    <ul class="nav-list">
-      <li><a class="nav-link" href="sobre.html">Sobre mim</a></li>
-      <li><a class="nav-link" href="habilidades.html">Habilidades</a></li>
-      <li><a class="nav-link" href="projetos.html">Projetos</a></li>
-      <li><a class="nav-link" href="contato.html">Contato</a></li>
-    </ul>
+   <ul class="nav-list">
+  <li><a class="nav-link" href="sobre.html">Sobre mim</a></li>
+  <li><a class="nav-link" href="habilidades.html">Habilidades</a></li>
+  <li><a class="nav-link" href="projetos.html">Projetos</a></li>
+</ul>
 
-    <a class="btn btn-primary" href="contato.html">Entrar em Contato</a>
+<a class="btn btn-primary" href="contato.html">Entrar em Contato</a>
+
   </nav>
 </header>
 
@@ -130,125 +130,49 @@
   </div>
 </section>
 
-  
-<!-- =========================
-     GALERIA DE FOTOS
-========================= -->
-<section class="gallery">
 
-  <!-- Cabeçalho da galeria -->
-  <header>
-    <h2>GALERIA DE FOTOS</h2>
-  </header>
-
-  <!-- Conteúdo da galeria -->
-  <div class="content">
-
-    <!-- Item da galeria -->
-    <figure>
-      <img src="assets/images/01.png" alt="" />
-      <figcaption>
-        <img src="assets/images/person.png" alt="" />
-        <span>@laviniapereira</span>
-      </figcaption>
-    </figure>
-
-    <figure data-delay>
-      <img src="assets/images/02.png" alt="" />
-      <figcaption>
-        <img src="assets/images/person.png" alt="" />
-        <span>@laviniapereira</span>
-      </figcaption>
-    </figure>
-
-    <figure>
-      <img src="assets/images/03.png" alt="" />
-      <figcaption>
-        <img src="assets/images/person.png" alt="" />
-        <span>@laviniapereira</span>
-      </figcaption>
-    </figure>
-
-    <figure data-delay>
-      <img src="assets/images/04.png" alt="" />
-      <figcaption>
-        <img src="assets/images/person.png" alt="" />
-        <span>@laviniapereira</span>
-      </figcaption>
-    </figure>
-
-  </div>
     
 
-  <!-- =========================
+ <!-- =========================
      FOOTER / RODAPÉ
 ========================= -->
-<footer>
+<footer class="site-footer">
 
-  <!-- Logo no rodapé -->
-  <div class="logo">
-    <img src="assets/logo.svg" alt="" />
-    Snitap
-  </div>
+  <div class="footer-container">
 
-  <!-- Navegação institucional -->
-  <nav>
-    <a href="#">Sobre</a>
-    <a href="#">Nossas lojas</a>
-    <a href="#">Política de privacidade</a>
-  </nav>
+    <!-- Texto de copyright -->
+    <p class="footer-copy">
+      © 2025 Luciene Freitas. Todos os direitos reservados.
+    </p>
 
-  <!-- Redes sociais -->
-  <div class="social-links">
-    <a href="#" title="instagram">
-      <img src="assets/icons/instagram.svg" alt="" />
-    </a>
-    <a href="#" title="facebook">
-      <img src="assets/icons/facebook.svg" alt="" />
-    </a>
-    <a href="#" title="youtube">
-      <img src="assets/icons/youtube.svg" alt="" />
-    </a>
-    <a href="#" title="tiktok">
-      <img src="assets/icons/tiktok.svg" alt="" />
-    </a>
+    <!-- Redes sociais -->
+    <div class="social-links">
+      <a href="#" aria-label="Instagram">
+        <img src="assets/icons/instagram.svg" alt="Instagram" />
+      </a>
+      <a href="#" aria-label="Facebook">
+        <img src="assets/icons/facebook.svg" alt="Facebook" />
+      </a>
+      <a href="#" aria-label="YouTube">
+        <img src="assets/icons/youtube.svg" alt="YouTube" />
+      </a>
+      <a href="#" aria-label="TikTok">
+        <img src="assets/icons/tiktok.svg" alt="TikTok" />  
+      </a>
+      <a href="#" aria-label="LinkedIn">
+        <img src="assets/icons/linkedin.svg" alt="LinkedIn" />  
+      </a>
+    </div>
+
   </div>
 
 </footer>
 
-  <div id="footer"></div>
-  <script>
-    fetch("footer.html")
-      .then(r => r.text())
-      .then(html => (document.getElementById("footer").innerHTML = html))
-      .catch(() => console.log("Não carregou footer.html"));
-  </script>
 
-  <script>
-  // Toggle do menu mobile
-  const menuToggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.top nav');
-  
-  menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    nav.classList.toggle('active');
-  });
-  
-  // Fechar menu ao clicar em um link
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      menuToggle.classList.remove('active');
-      nav.classList.remove('active');
-    });
-  });
-  
-  // Fechar menu ao clicar no overlay
-  nav.addEventListener('click', (e) => {
-    if (e.target === nav) {
-      menuToggle.classList.remove('active');
-      nav.classList.remove('active');
-    }
-  });
-</script>
+<!-- =========================
+     SCRIPT
+========================= -->
+
+
 </body>
 </html>

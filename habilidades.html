@@ -3,60 +3,218 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Habilidades | Luciene</title>
-  <link rel="stylesheet" href="./styles.css" />
+  <title>Habilidades | Luciene Freitas</title>
+
+  <!-- use seu CSS principal / tokens -->
+  <link rel="stylesheet" href="./styles/index.css" />
+  <link rel="stylesheet" href="./styles/habilidades.css" />
 </head>
 
 <body>
-  <header class="site-header" role="banner">
-    <nav class="nav" aria-label="Navegação principal">
-      <a class="brand" href="index.html" aria-label="Home">
-        <span class="brand-mark" aria-hidden="true">∞</span>
-        <span class="brand-name">Luciene</span>
-      </a>
 
+  <!-- HEADER (reuse do seu) -->
+  <header class="top">
+    <div class="prt_logo_wrapper">
+      <a href="index.html" aria-label="Home">
+        <img src="assets/logo_lf.png" alt="Logo do Portfólio" id="prt_close_tab">
+      </a>
+    </div>
+
+    <button class="menu-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav>
       <ul class="nav-list">
         <li><a class="nav-link" href="sobre.html">Sobre mim</a></li>
         <li><a class="nav-link active" href="habilidades.html">Habilidades</a></li>
         <li><a class="nav-link" href="projetos.html">Projetos</a></li>
-        <li><a class="nav-link" href="contato.html">Contato</a></li>
       </ul>
-
-      <a class="btn btn-primary" href="contato.html">Entrar em contato</a>
+      <a class="btn btn-primary" href="contato.html">Entrar em Contato</a>
     </nav>
   </header>
 
-  <main class="main" role="main">
-    <section class="section section-alt">
-      <div class="container">
-        <header class="section-head">
-          <h1 class="section-title">Habilidades</h1>
-          <p class="section-desc">Stack focada em entrega e governança.</p>
-        </header>
+  <main class="skills-main" role="main">
 
-        <ul class="grid grid-3" role="list">
-          <li class="tile">
-            <h3 class="tile-title">ServiceNow</h3>
-            <p class="tile-text">ITSM, SPM, App Engine, Flow Designer, Service Portal.</p>
-          </li>
-          <li class="tile">
-            <h3 class="tile-title">Front-end</h3>
-            <p class="tile-text">React, Angular, TypeScript, UI/UX.</p>
-          </li>
-          <li class="tile">
-            <h3 class="tile-title">Back-end</h3>
-            <p class="tile-text">Node.js, APIs, integrações, padrões.</p>
-          </li>
-        </ul>
+  <!-- HERO / INTRO -->
+  <section class="skills-hero" aria-label="Habilidades">
+    <div class="skills-container">
+      <header class="skills-head">
+        <p class="skills-kicker">HABILIDADES</p>
+        <h1 class="skills-title">Stack que eu uso pra entregar valor</h1>
+        <p class="skills-desc">
+          ServiceNow na veia (automação, catálogo, portal, regras) + Full-Stack pra construir experiências de ponta a ponta.
+          E sim: tô plugada em IA pra turbinar produtividade e qualidade.
+        </p>
+      </header>
+
+      <!-- “Provas rápidas” -->
+      <div class="skills-stats" aria-label="Resumo">
+        <div class="stat-card">
+          <strong>3+ anos</strong>
+          <span>ServiceNow</span>
+        </div>
+        <div class="stat-card">
+          <strong>ITSM / SPM</strong>
+          <span>Projetos e sustentação</span>
+        </div>
+        <div class="stat-card">
+          <strong>IA aplicada</strong>
+          <span>Produtividade e qualidade</span>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <div id="footer"></div>
-  <script>
-    fetch("footer.html")
-      .then(r => r.text())
-      .then(html => (document.getElementById("footer").innerHTML = html));
-  </script>
+  <!-- GRID DE HABILIDADES -->
+  <section class="skills-section" aria-label="Lista de habilidades">
+    <div class="skills-container">
+
+      <div class="skills-grid">
+
+        <!-- ServiceNow -->
+        <article class="skill-card">
+          <header class="skill-card__head">
+            <h2>ServiceNow</h2>
+            <p>Automação, catálogo e governança na prática.</p>
+          </header>
+
+          <ul class="skill-list">
+            <li>ITSM / SPM / App Engine</li>
+            <li>Flow Designer / Workflows</li>
+            <li>Catalog Items / Variable Sets / UI Policies</li>
+            <li>Business Rules / Client Scripts / Script Includes</li>
+            <li>ACL / Roles / Data model</li>
+            <li>Service Portal (Widgets / UX)</li>
+          </ul>
+
+          <div class="skill-tags" aria-label="Tags ServiceNow">
+            <span class="tag tag--green">Automação</span>
+            <span class="tag tag--blue">Portal</span>
+            <span class="tag tag--magenta">Governança</span>
+          </div>
+        </article>
+
+        <!-- Front-end -->
+        <article class="skill-card">
+          <header class="skill-card__head">
+            <h2>Front-end</h2>
+            <p>Interface limpa, responsiva e com foco em UX.</p>
+          </header>
+
+          <ul class="skill-list">
+            <li>HTML / CSS (design tokens, responsivo)</li>
+            <li>JavaScript / TypeScript</li>
+            <li>React</li>
+            <li>Angular</li>
+            <li>Componentização + boas práticas</li>
+          </ul>
+
+          <div class="skill-tags">
+            <span class="tag tag--blue">UI/UX</span>
+            <span class="tag tag--green">Clean CSS</span>
+          </div>
+        </article>
+
+        <!-- Back-end -->
+        <article class="skill-card">
+          <header class="skill-card__head">
+            <h2>Back-end</h2>
+            <p>APIs, lógica e integração sem gambiarra.</p>
+          </header>
+
+          <ul class="skill-list">
+            <li>Node.js</li>
+            <li>REST APIs</li>
+            <li>Banco de Dados (SQL)</li>
+            <li>Boas práticas e organização</li>
+          </ul>
+
+          <div class="skill-tags">
+            <span class="tag tag--magenta">APIs</span>
+            <span class="tag tag--blue">DB</span>
+          </div>
+        </article>
+
+        <!-- IA -->
+        <article class="skill-card">
+          <header class="skill-card__head">
+            <h2>IA (em evolução)</h2>
+            <p>Pós-graduação em IA para Devs + uso aplicado no dia a dia.</p>
+          </header>
+
+          <ul class="skill-list">
+            <li>Automação assistida (ideias, validação, refactor)</li>
+            <li>Documentação e padronização</li>
+            <li>Melhoria de produtividade</li>
+          </ul>
+
+          <div class="skill-tags">
+            <span class="tag tag--green">Produtividade</span>
+            <span class="tag tag--magenta">Qualidade</span>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- CTA -->
+      <section class="skills-cta" aria-label="Chamada para ação">
+        <div class="skills-cta__content">
+          <h2>Quer ver isso na prática?</h2>
+          <p>Eu mostro projetos reais com impacto (automação, portal, UX e entregas mensuráveis).</p>
+          <div class="skills-cta__actions">
+            <a class="btn btn-primary" href="projetos.html">Ver Projetos</a>
+            <a class="btn btn-secondary" href="contato.html">Falar comigo</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </section>
+
+</main>
+
+
+  <!-- =========================
+     FOOTER / RODAPÉ
+========================= -->
+<footer class="site-footer">
+
+  <div class="footer-container">
+
+    <!-- Texto de copyright -->
+    <p class="footer-copy">
+      © 2025 Luciene Freitas. Todos os direitos reservados.
+    </p>
+
+    <!-- Redes sociais -->
+    <div class="social-links">
+      <a href="#" aria-label="Instagram">
+        <img src="assets/icons/instagram.svg" alt="Instagram" />
+      </a>
+      <a href="#" aria-label="Facebook">
+        <img src="assets/icons/facebook.svg" alt="Facebook" />
+      </a>
+      <a href="#" aria-label="YouTube">
+        <img src="assets/icons/youtube.svg" alt="YouTube" />
+      </a>
+      <a href="#" aria-label="TikTok">
+        <img src="assets/icons/tiktok.svg" alt="TikTok" />  
+      </a>
+      <a href="#" aria-label="LinkedIn">
+        <img src="assets/icons/linkedin.svg" alt="LinkedIn" />  
+      </a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- =========================
+     SCRIPT
+========================= -->
+
+
 </body>
 </html>

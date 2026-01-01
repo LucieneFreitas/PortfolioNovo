@@ -3,80 +3,275 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projetos | Luciene</title>
-  <link rel="stylesheet" href="./styles.css" />
+  <title>Projetos | Luciene Freitas</title>
+
+  <link rel="stylesheet" href="./styles/index.css" />
+  <link rel="stylesheet" href="./styles/projetos.css" />
 </head>
 
 <body>
-  <header class="site-header" role="banner">
-    <nav class="nav" aria-label="Navegação principal">
-      <a class="brand" href="index.html" aria-label="Home">
-        <span class="brand-mark" aria-hidden="true">∞</span>
-        <span class="brand-name">Luciene</span>
-      </a>
 
+  <!-- HEADER (reuse do seu) -->
+  <header class="top">
+    <div class="prt_logo_wrapper">
+      <a href="index.html" aria-label="Home">
+        <img src="assets/logo_lf.png" alt="Logo do Portfólio" id="prt_close_tab">
+      </a>
+    </div>
+
+    <button class="menu-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav>
       <ul class="nav-list">
         <li><a class="nav-link" href="sobre.html">Sobre mim</a></li>
         <li><a class="nav-link" href="habilidades.html">Habilidades</a></li>
         <li><a class="nav-link active" href="projetos.html">Projetos</a></li>
-        <li><a class="nav-link" href="contato.html">Contato</a></li>
       </ul>
-
-      <a class="btn btn-primary" href="contato.html">Entrar em contato</a>
+      <a class="btn btn-primary" href="contato.html">Entrar em Contato</a>
     </nav>
   </header>
 
-  <main class="main" role="main">
-    <section class="section">
-      <div class="container">
-        <header class="section-head section-head-row">
-          <div>
-            <h1 class="section-title">Projetos</h1>
-            <p class="section-desc">Cases que mostram execução e impacto.</p>
+  <main class="projects-main">
+
+    <!-- HERO -->
+    <section class="projects-hero" aria-label="Projetos">
+      <div class="projects-hero__content">
+        <p class="eyebrow">PROJETOS</p>
+
+        <h1 class="projects-title">
+          Entrega com impacto: <span class="accent">ServiceNow</span> + <span class="accent">Full-Stack</span>
+        </h1>
+
+        <p class="projects-subtitle">
+          Aqui estão alguns cases que mostram meu estilo de trabalho: automação, UX, código limpo e resultado mensurável.
+        </p>
+
+        <div class="projects-cta">
+          <a class="btn btn-primary" href="#lista-projetos">Ver Projetos</a>
+          <a class="btn btn-secondary" href="contato.html">Falar comigo</a>
+        </div>
+
+        <!-- mini-métricas -->
+        <div class="projects-metrics" aria-label="Destaques">
+          <div class="metric">
+            <span class="metric__value">3+ anos</span>
+            <span class="metric__label">ServiceNow</span>
           </div>
-          <a class="btn btn-ghost" href="contato.html">Quero um projeto desses</a>
-        </header>
+          <div class="metric">
+            <span class="metric__value">ITSM / SPM</span>
+            <span class="metric__label">Ambientes críticos</span>
+          </div>
+          <div class="metric">
+            <span class="metric__value">UX + Automação</span>
+            <span class="metric__label">Menos retrabalho</span>
+          </div>
+        </div>
+      </div>
 
-        <div class="grid grid-3">
-          <article class="project">
-            <h2 class="project-title">Portal / Landing Page</h2>
-            <p class="project-text">Design responsivo e componentes reutilizáveis.</p>
-            <ul class="tags" aria-label="Tecnologias">
-              <li class="tag">HTML</li>
-              <li class="tag">CSS</li>
-              <li class="tag">UI</li>
-            </ul>
-          </article>
+      
 
-          <article class="project">
-            <h2 class="project-title">Automação no ServiceNow</h2>
-            <p class="project-text">Fluxos e regras reduzindo tempo operacional.</p>
-            <ul class="tags" aria-label="Tecnologias">
-              <li class="tag">Flow</li>
-              <li class="tag">BR</li>
-              <li class="tag">Script Include</li>
-            </ul>
-          </article>
+      <!-- bloco visual (mantém sua identidade verde/magenta/azul) -->
+ <div class="projects-visual">
+  
+  <!-- círculo / gradiente -->
+  <div class="visual-circle"></div>
 
-          <article class="project">
-            <h2 class="project-title">Catálogo com validações</h2>
-            <p class="project-text">Record Producer + validações client/server.</p>
-            <ul class="tags" aria-label="Tecnologias">
-              <li class="tag">Catalog</li>
-              <li class="tag">Client Script</li>
-              <li class="tag">UI Policy</li>
-            </ul>
-          </article>
+  <!-- foto -->
+  <div class="visual-photo">
+    <img src="assets/luciene.png" alt="Luciene Freitas">
+  </div>
+        
+      </div>
+    </section>
+
+    <!-- FILTROS (sem JS, mas já “organiza” visualmente) -->
+    <section class="projects-filters" aria-label="Filtros de projetos">
+      <div class="filters-container">
+        <h2 class="section-title">Escolha o que você quer ver</h2>
+        <p class="section-desc">Recrutador com pressa? Comece pelos “Destaques”. 😄</p>
+
+        <div class="chips" role="list">
+          <a class="chip chip--active" href="#lista-projetos" role="listitem">Destaques</a>
+          <a class="chip" href="#servicenow" role="listitem">ServiceNow</a>
+          <a class="chip" href="#fullstack" role="listitem">Full-Stack</a>
+          <a class="chip" href="#automacao" role="listitem">Automação</a>
+          <a class="chip" href="#ux" role="listitem">UX / Portal</a>
         </div>
       </div>
     </section>
+
+    <!-- LISTA -->
+    <section id="lista-projetos" class="projects-section" aria-label="Lista de projetos">
+      <div class="projects-container">
+
+        <header class="section-head">
+          <h2 class="section-title">Destaques</h2>
+          <p class="section-desc">
+            Cards no formato “o que era / o que fiz / impacto”. É isso que mais convence no processo seletivo.
+          </p>
+        </header>
+
+        <div class="projects-grid">
+
+          <!-- Card 1 (ServiceNow) -->
+          <article class="project-card" id="servicenow">
+            <div class="project-card__top">
+              <span class="badge badge--sn">ServiceNow</span>
+              <span class="badge badge--impact">Impacto alto</span>
+            </div>
+
+            <h3 class="project-title">Roteamento automático por tipo de acesso</h3>
+            <p class="project-desc">
+              Catálogo com decisão entre RACF e Database (DB2/MSSQL/PostgreSQL), atribuindo o grupo correto sem intervenção manual.
+            </p>
+
+            <div class="project-tags">
+              <span class="tag">ITSM</span>
+              <span class="tag">Catalog Item</span>
+              <span class="tag">Flow Designer</span>
+              <span class="tag">Assignment</span>
+            </div>
+
+            <ul class="project-bullets">
+              <li><strong>Problema:</strong> triagem manual e erro de direcionamento.</li>
+              <li><strong>Solução:</strong> regras por escolha + condições claras no fluxo.</li>
+              <li><strong>Impacto:</strong> menos retrabalho, SLA mais saudável.</li>
+            </ul>
+
+            <div class="project-actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Quero saber mais</a>
+            </div>
+          </article>
+
+          <!-- Card 2 (ServiceNow) -->
+          <article class="project-card" id="automacao">
+            <div class="project-card__top">
+              <span class="badge badge--sn">ServiceNow</span>
+              <span class="badge badge--ux">UX</span>
+            </div>
+
+            <h3 class="project-title">Portal: validações e UX sem fricção</h3>
+            <p class="project-desc">
+              Ajustes em variáveis (Date/DateTime), validação de período e mensagens de erro que guiam o usuário.
+            </p>
+
+            <div class="project-tags">
+              <span class="tag">Service Portal</span>
+              <span class="tag">Client Script</span>
+              <span class="tag">UI Policy</span>
+              <span class="tag">Qualidade</span>
+            </div>
+
+            <ul class="project-bullets">
+              <li><strong>Problema:</strong> formulário quebrava submissão por datas inválidas.</li>
+              <li><strong>Solução:</strong> validação + feedback imediato.</li>
+              <li><strong>Impacto:</strong> menos chamados “bobos”, mais autonomia.</li>
+            </ul>
+
+            <div class="project-actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Quero saber mais</a>
+              
+            </div>
+          </article>
+
+          <!-- Card 3 (Full-Stack) -->
+          <article class="project-card" id="fullstack">
+            <div class="project-card__top">
+              <span class="badge badge--fs">Full-Stack</span>
+              <span class="badge badge--clean">Clean</span>
+            </div>
+
+            <h3 class="project-title">Landing Page animada (CSS) + performance</h3>
+            <p class="project-desc">
+              UI moderna com hero, CTA, ticker infinito (sem pulo), e organização de CSS em tokens e módulos.
+            </p>
+
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Animação</span>
+              <span class="tag">Design Tokens</span>
+            </div>
+
+            <ul class="project-bullets">
+              <li><strong>Problema:</strong> layout desalinhado + código difícil de manter.</li>
+              <li><strong>Solução:</strong> refatoração + estrutura modular.</li>
+              <li><strong>Impacto:</strong> manutenção rápida e visual “premium”.</li>
+            </ul>
+
+            <div class="project-actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Quero saber mais</a>
+
+            </div>
+          </article>
+
+          <!-- Card 4 (IA / Produtividade) -->
+          <article class="project-card" id="ux">
+            <div class="project-card__top">
+              <span class="badge badge--ai">IA</span>
+              <span class="badge badge--impact">Produtividade</span>
+            </div>
+
+            <h3 class="project-title">IA aplicada no dia a dia (dev pragmática)</h3>
+            <p class="project-desc">
+              Uso de IA para acelerar documentação, padronizar qualidade e apoiar análise de requisitos/fluxos.
+            </p>
+
+            <div class="project-tags">
+              <span class="tag">Documentação</span>
+              <span class="tag">Padrões</span>
+              <span class="tag">Produtividade</span>
+              <span class="tag">Qualidade</span>
+            </div>
+
+            <ul class="project-bullets">
+              <li><strong>Problema:</strong> tempo alto em documentação e alinhamento.</li>
+              <li><strong>Solução:</strong> templates + revisão + consistência.</li>
+              <li><strong>Impacto:</strong> entregas mais rápidas e organizadas.</li>
+            </ul>
+
+            <div class="project-actions">
+              <a class="btn btn-primary" href="contato.html">Quero saber mais</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="projects-final-cta" aria-label="Call to action final">
+      <div class="final-cta-card">
+        <h2>Quer ver isso em ação?</h2>
+        <p>
+          Se você tem uma vaga ou projeto (ServiceNow / Full-Stack), me manda o contexto.
+          Eu retorno com clareza e próximos passos.
+        </p>
+        <div class="final-cta-actions">
+          <a class="btn btn-primary" href="contato.html">Entrar em Contato</a>
+          <a class="btn btn-secondary" href="sobre.html">Sobre mim</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <div id="footer"></div>
-  <script>
-    fetch("footer.html")
-      .then(r => r.text())
-      .then(html => (document.getElementById("footer").innerHTML = html));
-  </script>
+  <!-- FOOTER (idêntico ao da home) -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p class="footer-copy">© 2025 Luciene Freitas. Todos os direitos reservados.</p>
+
+      <div class="social-links">
+        <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="Instagram" /></a>
+        <a href="#" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="Facebook" /></a>
+        <a href="#" aria-label="YouTube"><img src="assets/icons/youtube.svg" alt="YouTube" /></a>
+        <a href="#" aria-label="TikTok"><img src="assets/icons/tiktok.svg" alt="TikTok" /></a>
+        <a href="#" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg" alt="LinkedIn" /></a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>

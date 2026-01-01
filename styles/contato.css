@@ -1,0 +1,246 @@
+/* =========================
+   CONTATO | BASE
+========================= */
+.contact-main {
+  padding-top: 110px; /* header fixo */
+}
+
+.contact-container {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* =========================
+   HERO
+========================= */
+.contact-hero {
+  padding: clamp(2rem, 4vw, 3.5rem) 0;
+}
+
+.contact-kicker {
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 0.75rem;
+}
+
+.contact-title {
+  font-size: clamp(2rem, 4.2vw, 3rem);
+  line-height: 1.08;
+  margin-bottom: 1rem;
+  color: var(--color-text-primary);
+}
+
+.contact-desc {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  max-width: 70ch;
+}
+
+/* cards */
+.contact-cards {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1rem 1.1rem;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.08);
+}
+
+.contact-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  background: linear-gradient(
+    135deg,
+    rgba(93, 217, 232, 0.18),
+    rgba(233, 30, 99, 0.10),
+    rgba(23, 181, 139, 0.16)
+  );
+}
+
+.contact-card__info strong {
+  display: block;
+  color: var(--color-text-primary);
+}
+
+.contact-card__info span {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+
+/* =========================
+   FORM + SIDE
+========================= */
+.contact-section {
+  padding: clamp(2rem, 4vw, 3.5rem) 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.contact-form {
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: clamp(1.2rem, 3vw, 1.8rem);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+}
+
+.contact-form__title {
+  font-size: 1.4rem;
+  margin-bottom: 0.35rem;
+  color: var(--color-text-primary);
+}
+
+.contact-form__desc {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 0.9rem;
+}
+
+.field span {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.10);
+  padding: 0.9rem 1rem;
+  outline: none;
+  font-size: 0.98rem;
+  color: var(--color-text-primary);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: rgba(23,181,139,0.55);
+  box-shadow: 0 0 0 4px rgba(23,181,139,0.12);
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.3rem;
+}
+
+.form-note {
+  margin-top: 0.8rem;
+  color: var(--color-text-secondary);
+  font-size: 0.92rem;
+}
+
+/* side */
+.contact-side {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-side__card {
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 1.2rem 1.2rem;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+}
+
+.contact-side__card h3 {
+  margin-bottom: 0.6rem;
+  color: var(--color-text-primary);
+}
+
+.contact-side__card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.55rem;
+  color: var(--color-text-secondary);
+}
+
+.contact-side__card p {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.contact-side__card--gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(93, 217, 232, 0.16),
+    rgba(233, 30, 99, 0.10),
+    rgba(23, 181, 139, 0.14)
+  );
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 900px) {
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .contact-main {
+    padding-top: 95px;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

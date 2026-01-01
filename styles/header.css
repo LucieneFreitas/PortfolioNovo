@@ -49,39 +49,39 @@ header.top {
 }
 
 /* Navegação (MENU + BOTÃO) */
-.top nav {
-  display: flex;
-  align-items: center;
+.top nav{
+  display:flex;
+  align-items:center;
   gap: var(--space-xl);
   flex: 1;
-  justify-content: flex-end;
+  justify-content:flex-end;
 }
 
 /* Lista de navegação */
-.nav-list {
-  display: flex;
+.nav-list{
+  display:flex;
+  align-items:center;
   gap: 2.5rem;
-  align-items: center;
-  list-style: none;
+  list-style:none;
 }
 
-.nav-link {
-  font-weight: 500;
+.nav-link{
+  font-weight:500;
   color: var(--color-text-secondary);
-  position: relative;
-  padding: 0.5rem 0;
+  position:relative;
+  padding: .5rem 0;
   font-size: var(--text-sm);
   transition: color var(--transition-base);
 }
 
 /* Underline animado */
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
+.nav-link::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:0;
+  height:2px;
   background: var(--color-primary);
   transition: width var(--transition-base);
 }
