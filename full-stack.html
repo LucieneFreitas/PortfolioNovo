@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Full-Stack | Luciene Freitas</title>
+
+  <meta name="description" content="Projetos Full-Stack da Luciene: casos, repositórios e previews interativos." />
+
+  <link rel="stylesheet" href="./styles/index.css" />
+  <link rel="stylesheet" href="./styles/fullstack.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="top">
+    <div class="prt_logo_wrapper">
+      <a href="index.html" aria-label="Home">
+        <img src="assets/logo_lf.png" alt="Logo do Portfólio" id="prt_close_tab">
+      </a>
+    </div>
+
+    <button class="menu-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav>
+      <ul class="nav-list">
+        <li><a class="nav-link" href="sobre.html">Sobre mim</a></li>
+        <li><a class="nav-link" href="habilidades.html">Habilidades</a></li>
+        <li><a class="nav-link active" href="full-stack.html">Full-Stack</a></li>
+        <li><a class="nav-link" href="projetos.html">Projetos</a></li>
+      </ul>
+      <a class="btn btn-primary" href="contato.html">Entrar em Contato</a>
+    </nav>
+  </header>
+
+  <main class="fs-main" role="main">
+
+    <!-- HERO -->
+    <section class="fs-hero" aria-label="Full-Stack">
+      <div class="fs-container fs-hero__grid">
+
+        <div class="fs-hero__copy">
+          <p class="fs-kicker">FULL-STACK</p>
+
+          <h1 class="fs-title">
+            Projetos que mostram <span class="fs-accent">código</span>,
+            <span class="fs-accent">UI</span> e <span class="fs-accent">resultado</span>.
+          </h1>
+
+          <p class="fs-subtitle">
+            Cards com contexto rápido. Quer mergulhar? Clique em
+            <strong>Repositório</strong> (README + código).
+            Quer ver funcionando? Clique em <strong>Preview</strong> (GitHub Pages).
+          </p>
+
+          <!-- CTA ÚNICO -->
+          <div class="fs-hero__cta">
+            <a
+              class="btn btn-primary"
+              href="https://github.com/LucieneFreitas?tab=repositories"
+              target="_blank"
+              rel="noopener"
+            >
+              Ver todos no GitHub
+            </a>
+          </div>
+
+          <div class="fs-badges" aria-label="Stack e foco">
+            <span class="fs-badge">HTML</span>
+            <span class="fs-badge">CSS</span>
+            <span class="fs-badge">JavaScript</span>
+            <span class="fs-badge">React</span>
+            <span class="fs-badge">Node.js</span>
+            <span class="fs-badge">UX</span>
+            <span class="fs-badge">Performance</span>
+          </div>
+        </div>
+
+        <!-- Visual -->
+        <div class="fs-hero__visual" aria-hidden="true">
+          <div class="fs-orb"></div>
+          <img class="fs-hero__photo" src="assets/lu_verde.png" alt="" />
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section class="fs-section" id="fs-projetos" aria-label="Lista de projetos Full-Stack">
+      <div class="fs-container">
+
+        <header class="fs-section__head">
+          <h2 class="fs-h2">Destaques Full-Stack</h2>
+          <p class="fs-desc">
+            Formato rápido: o que é e o que eu fiz. Para ver a prova: repo + preview.
+          </p>
+        </header>
+
+        <div class="fs-grid" role="list">
+
+          <!-- CARD 1 -->
+          <article class="fs-card" role="listitem">
+            <div class="fs-card__top">
+              <div class="fs-card__chips">
+                <span class="fs-chip">LP</span>
+                <span class="fs-chip">Responsivo</span>
+                <span class="fs-chip">CSS</span>
+              </div>
+              <p class="fs-card__when">2025</p>
+            </div>
+
+            <h3 class="fs-card__title">Zingen — Landing Page (Rocketseat)</h3>
+            <p class="fs-card__text">
+              Landing page de produto com foco em responsividade, hierarquia visual e CTA.
+              Código organizado pra manter e evoluir sem dor.
+            </p>
+
+            <ul class="fs-points" aria-label="O que foi feito">
+              <li><strong>O que eu fiz:</strong> layout responsivo + componentes + tokens.</li>
+              <li><strong>Impacto:</strong> UI mais “premium”, leitura rápida e navegação clara.</li>
+            </ul>
+
+            <div class="fs-card__stack" aria-label="Tecnologias">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+
+            <div class="fs-card__actions">
+              <a class="btn btn-primary"
+                 href="https://github.com/LucieneFreitas/SEU_REPO_ZINGEN"
+                 target="_blank" rel="noopener">
+                Repositório
+              </a>
+
+              <a class="btn btn-secondary"
+     href="https://www.youtube.com/watch?v=SEU_VIDEO_ID"
+     target="_blank" rel="noopener">
+    Preview
+  </a>
+            </div>
+
+            <p class="fs-card__note">
+              Dica: no README tem estrutura, decisões e como rodar local.
+            </p>
+          </article>
+
+          <!-- CARD 2 -->
+          <article class="fs-card" role="listitem">
+            <div class="fs-card__top">
+              <div class="fs-card__chips">
+                <span class="fs-chip">Portfólio</span>
+                <span class="fs-chip">Animação</span>
+                <span class="fs-chip">CSS</span>
+              </div>
+              <p class="fs-card__when">2025</p>
+            </div>
+
+            <h3 class="fs-card__title">Portfólio — Tokens + Ticker infinito</h3>
+            <p class="fs-card__text">
+              Estrutura de CSS em módulos (global + páginas), hero com CTA e ticker contínuo sem “pulo”.
+              Foco em consistência visual e manutenção simples.
+            </p>
+
+            <ul class="fs-points" aria-label="O que foi feito">
+              <li><strong>O que eu fiz:</strong> organização de estilos + componentes reutilizáveis.</li>
+              <li><strong>Impacto:</strong> manutenção rápida, visual consistente, UX limpa.</li>
+            </ul>
+
+            <div class="fs-card__stack" aria-label="Tecnologias">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+
+            <div class="fs-card__actions">
+              <a class="btn btn-primary"
+                 href="https://github.com/LucieneFreitas/SEU_REPO_PORTFOLIO"
+                 target="_blank" rel="noopener">
+                Repositório
+              </a>
+
+              <a class="btn btn-secondary"
+                 href="https://lucienefreitas.github.io/SEU_REPO_PORTFOLIO/"
+                 target="_blank" rel="noopener">
+                Preview
+              </a>
+            </div>
+
+            <p class="fs-card__note">
+              Dica: README explica tokens, pastas e como publicar no Pages.
+            </p>
+          </article>
+
+          <!-- CARD 3 -->
+          <article class="fs-card" role="listitem">
+            <div class="fs-card__top">
+              <div class="fs-card__chips">
+                <span class="fs-chip">App</span>
+                <span class="fs-chip">API</span>
+                <span class="fs-chip">Node</span>
+              </div>
+              <p class="fs-card__when">2025</p>
+            </div>
+
+            <h3 class="fs-card__title">Projeto Full-Stack — API + Front</h3>
+            <p class="fs-card__text">
+              Exemplo de projeto com backend e frontend, pensado pra mostrar integração e organização.
+              (Aqui você troca pelo seu caso real quando quiser.)
+            </p>
+
+            <ul class="fs-points" aria-label="O que foi feito">
+              <li><strong>O que eu fiz:</strong> endpoints + consumo no front + validações.</li>
+              <li><strong>Impacto:</strong> fluxo completo, dados consistentes e UX previsível.</li>
+            </ul>
+
+            <div class="fs-card__stack" aria-label="Tecnologias">
+              <span>Node.js</span><span>JS</span><span>Front</span>
+            </div>
+
+            <div class="fs-card__actions">
+              <a class="btn btn-primary"
+                 href="https://github.com/LucieneFreitas/SEU_REPO_API"
+                 target="_blank" rel="noopener">
+                Repositório
+              </a>
+
+              <a class="btn btn-secondary"
+                 href="https://lucienefreitas.github.io/exemplo/"
+                 target="_blank" rel="noopener">
+                Preview
+              </a>
+            </div>
+
+            <p class="fs-card__note">
+              Dica: se não tiver preview, troque por “Documentação” e link do README.
+            </p>
+          </article>
+
+        </div>
+
+        <!-- CTA final -->
+        <div class="fs-cta">
+          <div>
+            <h3 class="fs-cta__title">Quer ver mais repositórios?</h3>
+            <p class="fs-cta__text">Aqui está o hub com tudo organizado. Atualização sempre no GitHub.</p>
+          </div>
+
+          <a class="btn btn-primary"
+             href="https://github.com/LucieneFreitas?tab=repositories"
+             target="_blank" rel="noopener">
+            Abrir GitHub
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================
+     FOOTER / RODAPÉ
+========================= -->
+<footer class="site-footer">
+
+  <div class="footer-container">
+
+    <!-- Texto de copyright -->
+    <p class="footer-copy">
+      © 2025 Luciene Freitas. Todos os direitos reservados.
+    </p>
+
+    <!-- Redes sociais -->
+    <div class="social-links">
+      <a href="https://www.instagram.com/lucienefreitas.rj/ " target="_blank" aria-label="Instagram">
+        <img src="assets/icons/instagram.svg" alt="Instagram" />
+      </a>
+      <a href="https://www.facebook.com/luciene.freitas.560/" target="_blank" aria-label="Facebook">
+        <img src="assets/icons/facebook.svg" alt="Facebook" />
+      </a>
+      <a href="https://www.youtube.com/@lucienefreitas7889" target="_blank" aria-label="YouTube">
+        <img src="assets/icons/youtube.svg" alt="YouTube" />
+      </a>
+      <a href="https://www.tiktok.com/@lucienefreitas.dev" target="_blank" aria-label="TikTok">
+        <img src="assets/icons/tiktok.svg" alt="TikTok" />  
+      </a>
+      <a href="https://www.linkedin.com/in/luciene-freitas/" target="_blank" aria-label="LinkedIn">
+        <img src="assets/icons/linkedin.svg" alt="LinkedIn" />  
+      </a>
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>

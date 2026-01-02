@@ -1,0 +1,200 @@
+<!-- servicenow.html -->
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ServiceNow | Luciene Freitas</title>
+
+  <meta name="description" content="Cases ServiceNow da Luciene: automação, catálogo, portal e qualidade — com demonstração em vídeo." />
+
+  <link rel="stylesheet" href="./styles/index.css" />
+  <link rel="stylesheet" href="./styles/servicenow.css" />
+</head>
+
+<body>
+
+  <!-- HEADER (reuse do seu) -->
+  <header class="top">
+    <div class="prt_logo_wrapper">
+      <a href="index.html" aria-label="Home">
+        <img src="assets/logo_lf.png" alt="Logo do Portfólio" id="prt_close_tab">
+      </a>
+    </div>
+
+    <button class="menu-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav>
+      <ul class="nav-list">
+        <li><a class="nav-link" href="sobre.html">Sobre mim</a></li>
+        <li><a class="nav-link" href="habilidades.html">Habilidades</a></li>
+        <li><a class="nav-link" href="full-stack.html">Full-Stack</a></li>
+        <li><a class="nav-link active" href="servicenow.html">ServiceNow</a></li>
+        <li><a class="nav-link" href="projetos.html">Projetos</a></li>
+      </ul>
+      <a class="btn btn-primary" href="contato.html">Entrar em Contato</a>
+    </nav>
+  </header>
+
+  <main class="sn-main" role="main">
+
+    <!-- HERO -->
+    <section class="sn-hero" aria-label="ServiceNow">
+      <div class="sn-container sn-hero__grid">
+
+        <div class="sn-hero__copy">
+          <p class="sn-kicker">SERVICENOW</p>
+
+          <h1 class="sn-title">
+            Cases que mostram <span class="sn-accent">automação</span>, <span class="sn-accent">UX</span> e <span class="sn-accent">governança</span>.
+          </h1>
+
+          <p class="sn-subtitle">
+            Sem enrolação: o recrutador vê em <strong>2 minutos</strong> o que eu implementei e o impacto no fluxo.
+            Catálogo, Portal, regras e roteamento — com rastreabilidade e qualidade.
+          </p>
+
+          <!-- APENAS 1 BOTÃO -->
+          <div class="sn-hero__cta">
+            <a class="btn btn-primary"
+               href="https://www.youtube.com/watch?v=SEU_VIDEO_YT"
+               target="_blank" rel="noopener">
+              Assistir no YouTube
+            </a>
+          </div>
+
+          <div class="sn-badges" aria-label="Focos em ServiceNow">
+            <span class="sn-badge">ITSM</span>
+            <span class="sn-badge">Catálogo</span>
+            <span class="sn-badge">Service Portal</span>
+            <span class="sn-badge">Flow Designer</span>
+            <span class="sn-badge">Client Scripts</span>
+            <span class="sn-badge">Business Rules</span>
+            <span class="sn-badge">Qualidade</span>
+          </div>
+        </div>
+
+        <!-- Visual (mesma pegada do full-stack) -->
+        <div class="sn-hero__visual" aria-hidden="true">
+  <div class="sn-orb"></div>
+
+  <div class="sn-photo-wrap">
+    <img
+      class="sn-hero__photo"
+      src="assets/lu_verde.png"
+      alt="Luciene Freitas"
+    />
+  </div>
+</div>
+
+    </section>
+
+    <!-- SEÇÃO DE DESTAQUES (texto + “o que vai ver”) -->
+    <section class="sn-section" aria-label="O que o recrutador vai ver">
+      <div class="sn-container">
+
+        <header class="sn-section__head">
+          <h2 class="sn-h2">O que você vai ver no vídeo</h2>
+          <p class="sn-desc">
+            Formato “problema → solução → impacto”. Direto ao ponto, do jeitinho que processo seletivo gosta.
+          </p>
+        </header>
+
+        <div class="sn-grid" role="list">
+
+          <article class="sn-card" role="listitem">
+            <h3 class="sn-card__title">Roteamento automático por tipo de acesso</h3>
+            <p class="sn-card__text">
+              Decisão entre RACF e Database (DB2/MSSQL/PostgreSQL), atribuindo grupo correto sem triagem manual.
+            </p>
+            <ul class="sn-points" aria-label="Resumo do case">
+              <li><strong>Problema:</strong> erro de direcionamento + retrabalho.</li>
+              <li><strong>Solução:</strong> variáveis + regras claras + fluxo consistente.</li>
+              <li><strong>Impacto:</strong> menos reabertura e SLA mais saudável.</li>
+            </ul>
+          </article>
+
+          <article class="sn-card" role="listitem">
+            <h3 class="sn-card__title">Portal: validações e UX sem fricção</h3>
+            <p class="sn-card__text">
+              Ajustes em variáveis (Date/DateTime), validação de período e mensagens que guiam o usuário.
+            </p>
+            <ul class="sn-points" aria-label="Resumo do case">
+              <li><strong>Problema:</strong> formulário quebrando submissão por datas inválidas.</li>
+              <li><strong>Solução:</strong> validação + feedback imediato.</li>
+              <li><strong>Impacto:</strong> mais autonomia e menos “chamados bobos”.</li>
+            </ul>
+          </article>
+
+          <article class="sn-card" role="listitem">
+            <h3 class="sn-card__title">Qualidade: regras, padronização e rastreio</h3>
+            <p class="sn-card__text">
+              Organização, padrões e rastreabilidade para manutenção tranquila e evolução sem “bola de neve”.
+            </p>
+            <ul class="sn-points" aria-label="Resumo do case">
+              <li><strong>Problema:</strong> inconsistência e ajustes manuais recorrentes.</li>
+              <li><strong>Solução:</strong> regras e estrutura com boas práticas.</li>
+              <li><strong>Impacto:</strong> entrega mais previsível e sustentável.</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <!-- CTA final (mesmo botão, 1 CTA) -->
+        <div class="sn-cta">
+          <div>
+            <h3 class="sn-cta__title">Quer ver a demo completa?</h3>
+            <p class="sn-cta__text">Vídeo curto, prova visual, sem precisar acesso à instância.</p>
+          </div>
+
+          <a class="btn btn-primary"
+             href="https://www.youtube.com/watch?v=SEU_VIDEO_YT"
+             target="_blank" rel="noopener">
+            Assistir no YouTube
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================
+     FOOTER / RODAPÉ
+========================= -->
+<footer class="site-footer">
+
+  <div class="footer-container">
+
+    <!-- Texto de copyright -->
+    <p class="footer-copy">
+      © 2025 Luciene Freitas. Todos os direitos reservados.
+    </p>
+
+    <!-- Redes sociais -->
+    <div class="social-links">
+      <a href="https://www.instagram.com/lucienefreitas.rj/ " target="_blank" aria-label="Instagram">
+        <img src="assets/icons/instagram.svg" alt="Instagram" />
+      </a>
+      <a href="https://www.facebook.com/luciene.freitas.560/" target="_blank" aria-label="Facebook">
+        <img src="assets/icons/facebook.svg" alt="Facebook" />
+      </a>
+      <a href="https://www.youtube.com/@lucienefreitas7889" target="_blank" aria-label="YouTube">
+        <img src="assets/icons/youtube.svg" alt="YouTube" />
+      </a>
+      <a href="https://www.tiktok.com/@lucienefreitas.dev" target="_blank" aria-label="TikTok">
+        <img src="assets/icons/tiktok.svg" alt="TikTok" />  
+      </a>
+      <a href="https://www.linkedin.com/in/luciene-freitas/" target="_blank" aria-label="LinkedIn">
+        <img src="assets/icons/linkedin.svg" alt="LinkedIn" />  
+      </a>
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>

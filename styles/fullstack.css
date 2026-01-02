@@ -1,0 +1,262 @@
+/* =========================================
+   FULL-STACK PAGE
+========================================= */
+
+.fs-main {
+  padding-top: 110px; /* compensar header fixo */
+}
+
+.fs-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* HERO */
+.fs-hero {
+  padding: 3.5rem 0 2.5rem;
+}
+
+.fs-hero__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.fs-kicker {
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.fs-title {
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 1.08;
+  margin-bottom: 1rem;
+}
+
+.fs-accent {
+  color: var(--color-primary);
+}
+
+.fs-subtitle {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 52ch;
+}
+
+.fs-hero__cta {
+  display: flex;
+  gap: 0.9rem;
+  margin: 1.4rem 0 1.2rem;
+  flex-wrap: wrap;
+}
+
+/* Badges */
+.fs-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.fs-badge {
+  font-size: 0.85rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: var(--color-bg-alt);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Visual */
+.fs-hero__visual {
+  position: relative;
+  min-height: 320px;
+  display: grid;
+  place-items: center;
+}
+
+.fs-orb {
+  width: min(340px, 85vw);
+  height: min(340px, 85vw);
+  border-radius: 50%;
+  filter: blur(0px);
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(103, 232, 249, 0.55),
+    rgba(34, 197, 94, 0.35) 45%,
+    rgba(236, 72, 153, 0.25) 80%
+  );
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  opacity: 0.9;
+  position: absolute;
+  z-index: 0;
+}
+
+.fs-hero__photo {
+  width: min(340px, 75vw);
+  height: auto;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 18px 30px rgba(0,0,0,0.12));
+}
+
+/* SECTION */
+.fs-section {
+  padding: 2.5rem 0 4rem;
+}
+
+.fs-section__head {
+  margin-bottom: 1.4rem;
+}
+
+.fs-h2 {
+  font-size: 1.7rem;
+  margin-bottom: 0.35rem;
+}
+
+.fs-desc {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 70ch;
+}
+
+/* GRID */
+.fs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.6rem;
+}
+
+/* CARD */
+.fs-card {
+  background: var(--color-white);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 18px;
+  padding: 1.3rem 1.3rem 1.1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.fs-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.fs-card__chips {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.fs-chip {
+  font-size: 0.78rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.12);
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.fs-card__when {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.fs-card__title {
+  font-size: 1.15rem;
+  margin: 0.25rem 0 0.55rem;
+}
+
+.fs-card__text {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0.85rem;
+}
+
+.fs-points {
+  margin: 0 0 1rem;
+  padding-left: 1.1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+}
+
+.fs-points strong {
+  color: var(--color-text-primary);
+}
+
+.fs-card__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.fs-card__stack span {
+  font-size: 0.8rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  background: var(--color-bg-alt);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.fs-card__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.fs-card__note {
+  margin-top: 0.85rem;
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+}
+
+/* CTA final */
+.fs-cta {
+  margin-top: 2rem;
+  background: linear-gradient(90deg, rgba(103,232,249,0.18), rgba(34,197,94,0.14), rgba(236,72,153,0.12));
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 20px;
+  padding: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.fs-cta__title {
+  margin: 0 0 0.2rem;
+}
+
+.fs-cta__text {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .fs-hero__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fs-hero__visual {
+    order: -1;
+    min-height: 260px;
+  }
+
+  .fs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fs-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
